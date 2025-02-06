@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.nav-bar{
+    width: 100%;
+    height: 50px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+}
+.nav-bar ul{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+}
+.nav-bar ul li{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+} 
+.nav-bar ul li a{
+    text-decoration: none;
+    color: rgb(207, 205, 205);
+}
+.nav-bar ul li:hover,.nav-bar ul li a:hover{
+    background-color: white;
+    color: black;
+
+}
+.nav-vertical{
+    display: none;
+}
+.nav-vertical img{
+    cursor: pointer;
+}
+.menu-container{
+    width: fit-content;
+    background-color: black;
+    padding: 4px;
+    position:absolute;
+    right: -65px;
+    top: 50px;
+    display: none; 
+   
+}
+.menu-container li{
+    margin: 5px 5px 5px 0px;
+    list-style-type: none;
+}
+.menu-container li a{
+    color: rgb(200, 199, 199);
+    text-decoration: none;
+   
+}
+.menu-container li:hover{
+    background-color: white;
+    color: black;
+}
+.menu-container li a:hover{
+    color: black;
+}
+
+
+
+.hero-section{
+    width: 98vw;
+    height: 92vh;
+    background-image: url("./landingPagePic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-section h1{
+    font-size: 56px;
+}
+.btns{
+    display:flex;
+    width: 210px;
+    justify-content: space-between;
+}
+.btns button{
+    padding: 5px ;
+    width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+#signIn{
+    background-color: black;
+    color: white ;
+}
+.signin-box{
+    width: 200px;
+    background:transparent;
+    position: relative;
+}
+.signin-box form{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.signin-box form input{
+    padding: 5px;
+    outline: none;
+}
+.signin-box  button,.signup-box button{
+    width: 100px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: 1px solid black;
+    background:white;
+    color: black;
+    padding: 5px;
+}
+
+.signup-box{
+    width: 200px;
+    background: transparent;
+    position: relative;
+    top: 0px;
+    left: -240px;
+    height: 0px;
+    opacity: 0;
+    margin-bottom: 10px;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes flow {
+    0%{
+        left:-240px;
+        height: 0px;
+        opacity: 0;
+    }
+    100%{
+        left: 0px;
+        height: 100%;
+        opacity: 1;
+    }
+}
+.signup-box form{
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.signup-box form input{
+    padding: 5px;
+    outline: none;
+}
+.signup-box form button{
+    background:white;
+    color: black;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+
+
+
+@media screen and (max-width:450px){
+    #nav-horizontal{
+        display: none;
+    }
+    .nav-vertical{
+        display: block;
+    }
+}

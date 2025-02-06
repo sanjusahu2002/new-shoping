@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div>Meshop</div>
+        <ul id="nav-horizontal">
+            <li><a href="../shop/index.html">Home</a></li>
+            <li><a href="">LogIn</a></li>
+            <li><a href="">SignUp</a></li>
+            <li><a href="../mycart/index.html">MyCart</a></li>
+            <li><a href="../profile/index.html">Profile</a></li>
+        </ul>
+        <div class="nav-vertical">
+            <img src="./menu.png" alt="" width="16px" id="menu">
+
+        </div>
+    </nav>
+    <div class="hero-section">
+        <h1>Meshop.</h1>
+        <p>Your first shop built in HTML,CSS and Javascript.</p>
+        <div class="btns"> 
+            <button id="signIn" >SignIn</button>
+            <button id="signUp">SignUp</button>
+            
+        </div>
+        <div class="signin-box" id="signinbox" >
+            <h3>SignIn</h3>
+            <form action="">
+                <input type="email" placeholder="Enter email" id="signin-email">
+                <input type="password" placeholder="Passoword" id="signin-password">
+            </form>
+            <button id="signin" onclick="logInBtn()">Signin</button>
+        </div>
+        <div class="signup-box" id="signupbox" >
+            <h3>SignUp</h3>
+            <form action="">
+                <input type="text" placeholder="First Name" id="fname">
+                <input type="text" placeholder="Last Name" id="lname">
+                <input type="email" placeholder="abc@gmail.com" id="email">
+                <input type="password" placeholder="Password" id="password">
+                <input type="password" placeholder="Confirm Password" id="cpassword">
+            </form>
+            <button id="signup" >Signup</button>
+        </div>
+    </div>
+    <ul class="menu-container" id="menu-box">
+        <li><a href="../shop/index.html">Home</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Signup</a></li>
+        <li><a href="../mycart/index.html">Mycart</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+    <!-- <input type="email" id="email">
+    <input type="password" id="password">
+    <button id="submit">Sbumit</button>
+    <br>
+    <input type="text" placeholder="name" id="signUpName">
+    <input type="email" placeholder="new email" id="signUpEmail">
+    <input type="password" placeholder="password" id="signUpPassword">
+    <button id="signUp">Sign Up</button>-->
+
+    <script src="./script.js"></script> 
+</body>
+</html>

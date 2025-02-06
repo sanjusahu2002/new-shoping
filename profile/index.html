@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- nav bar and menu -->
+    <nav class="nav-bar">
+        <div>Meshop</div>
+        <ul id="nav-horizontal">
+            <li><a href="../shop/index.html">Home</a></li>
+            <li><a href="../loginSignup/index.html">LogIn</a></li>
+            <li><a href="../loginSignup/index.html">SignUp</a></li>
+            <li><a href="../mycart/index.html">MyCart</a></li>
+            <li><a href="../profile/index.html">Profile</a></li>
+        </ul>
+        <div class="nav-vertical">
+            <img src="../loginSignup/menu.png" alt="" width="16px" id="menu">
+
+        </div>
+    </nav>
+    <ul class="menu-container" id="menu-box">
+        <li><a href="../shop/index.html">Home</a></li>
+        <li><a href="../loginSignup/index.html">Login</a></li>
+        <li><a href="../loginSignup/index.html">Signup</a></li>
+        <li><a href="../mycart/index.html">Mycart</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+    </ul>
+    <div class="profile-password">
+        <div class="my-profile">
+            <h1>My Profile</h1>
+            <form action="">
+                <input type="text" placeholder="First Name"  >
+                <input type="text"  placeholder="Last Name" >
+            </form>
+            <button id="save-info">Save Info</button>
+        </div>
+        <div class="edit-password">
+            <h1>Edit Password</h1>
+            <form action="">
+                <input type="password" placeholder="Old Password" id="old-password">
+                <input type="password" placeholder="New Password" id="new-password">
+                <input type="password" placeholder="Confirm Password" id="c-password">
+            </form>
+            <button onclick="changePassword()">Change Password</button><br>
+            <button id="log-out" onclick="logOut()">Log Out</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

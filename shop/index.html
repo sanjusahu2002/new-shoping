@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <!-- nav bar and menu -->
+    <nav class="nav-bar">
+        <div>Meshop</div>
+        <ul id="nav-horizontal">
+            <li ><a href="../shop/index.html">Home</a></li>
+            <li><a href="../loginSignup/index.html">LogIn</a></li>
+            <li><a href="../loginSignup/index.html">SignUp</a></li>
+            <li><a href="../mycart/index.html">MyCart</a></li>
+            <li><a href="../profile/index.html">Profile</a></li>
+        </ul>
+        <div class="nav-vertical">
+            <img src="../loginSignup/menu.png" alt="ds" width="16px" id="menu">
+
+        </div>
+    </nav>
+    <ul class="menu-container" id="menu-box">
+        <li><a href="../shop/index.html">Home</a></li>
+        <li><a href="../loginSignup/index.html">Login</a></li>
+        <li><a href="../loginSignup/index.html">Signup</a></li>
+        <li><a href="../mycart/index.html">Mycart</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+    </ul>
+    <div class="hero-container">
+        <div class="filter-box">
+            <div class="filter-items">
+                <h4>Colors</h4>
+                <div><input type="checkbox" name="" value="red" id="red"><label for="red">Red</label></div>
+                <div><input type="checkbox" name="" value="blue" id="blue"><label for="blue">Blue</label></div>
+                <div><input type="checkbox" name="" value="green" id="green"><label for="green">Green</label></div>
+                <div><input type="checkbox" name="" value="black" id="black"><label for="black">Black</label></div>
+                <div><input type="checkbox" name="" value="white" id="white"><label for="white">White</label></div>
+            </div>
+            <div class="filter-items">
+                <h4>Sizes</h4>
+                <div><input type="checkbox" name="" value="s" id="s"><label for="s">S</label></div>
+                <div><input type="checkbox" name="" value="l" id="l"><label for="l">L</label></div>
+                <div><input type="checkbox" name="" value="l" id="m"><label for="m">M</label></div>
+                <div><input type="checkbox" name="" value="xl" id="xl"><label for="xl">XL</label></div>
+            </div>
+            <div class="filter-items">
+                <!-- loock on it -->
+                <h4>Ratings</h4>
+                <input id="range" type="range" min="0" max="5" value="0" list="values" >
+                <datalist id="values">
+                    <option value="0" label="0"></option>
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5" label="5"></option>
+                  </datalist>
+
+
+            </div>
+            <div class="filter-items">
+                <h4>Price Range</h4>
+                <div><input type="checkbox" name="" value="0-25" id="0-25"><label for="0-25">$0 to $25</label></div>
+                <div><input type="checkbox" name="" value="25-50" id="25-50"><label for="25-50">$25 to $50</label></div>
+                <div><input type="checkbox" name="" value="50-100" id="50-100"><label for="50-100">$50 to $100</label></div>
+                <div><input type="checkbox" name="" value="100-onwards" id="100-onwards"><label for="100-onwards">$100 onwards</label></div>
+            </div>
+            <div class="filter-items filter-btn">
+                <button id="apply-filter">Apply Filter</button>
+            </div>
+        </div>
+        <!-- item box -->
+        <div class="item-box">
+            <div class="search-bar">
+                <input type="text" placeholder="Search" id="search-items">
+            </div>
+            <div class="category-bar">
+                <button class="tab-links active" onclick="handleTab(event,'All')">All</button>
+                <button class="tab-links" onclick="handleTab(event,'men')">Mens</button>
+                <button class="tab-links" onclick="handleTab(event,'women')">Womens</button>
+                <button class="tab-links" onclick="handleTab(event,'Jewellery')">Jewellery</button>
+                <button class="tab-links" onclick="handleTab(event,'Electronics')">Electronics</button>
+            </div>
+            <div class="mens-clothing clothing" id="men">
+                <h3>Men's clothing</h3>
+                <div class="clothing-items" id="mens-clothing">
+                </div>
+            </div>
+
+            <div class="womens-clothing clothing" id="women">
+                <h3>Women's clothing</h3>
+                <div class="clothing-items" id="womens-clothing">
+                </div>
+            </div>
+
+            <div class="Jewellery clothing" id="Jewellery">
+                <h3>Jewellery</h3>
+                <div class="clothing-items" id="jewelery">
+
+                </div>
+            </div>
+
+            <div class="electronics clothing" id="Electronics">
+                <h3>Electronics</h3>
+                <div class="clothing-items" id="electronics">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filtered-container">
+        <div class="filtered-closed-container">
+            <button id="close-filtered-container">Close</button>
+        </div>
+        <div class="filtered-items" id="fff">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

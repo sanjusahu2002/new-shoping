@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+        <!-- nav bar and menu -->
+    <nav class="nav-bar">
+        <div>Meshop</div>
+        <ul id="nav-horizontal">
+            <li><a href="../shop/index.html">Home</a></li>
+            <li><a href="../loginSignup/index.html">LogIn</a></li>
+            <li><a href="../loginSignup/index.html">SignUp</a></li>
+            <li><a href="../mycart/index.html">MyCart</a></li>
+            <li><a href="../profile/index.html">Profile</a></li>
+        </ul>
+        <div class="nav-vertical">
+            <img src="../loginSignup/menu.png" alt="" width="16px" id="menu">
+
+        </div>
+    </nav>
+    <ul class="menu-container" id="menu-box">
+        <li ><a href="../shop/index.html">Home</a></li>
+        <li><a href="../loginSignup/index.html">Login</a></li>
+        <li><a href="../loginSignup/index.html">Signup</a></li>
+        <li><a href="../mycart/index.html">Mycart</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+    </ul>
+    <div class="hero-section">
+        <h1>My Cart</h1>
+        <div class="checkout-box">
+            <div class="added-items">
+                
+            </div>
+            <div class="checkout-list">
+                <p>Checkout List</p>
+                <ul class="added-list">
+                </ul>
+                <div id="total">
+                    <span>Total :</span>
+                    <span>$<span id="total-of-items"></span></span>
+                </div>
+    
+                <div class="checkout-container"><button id="checkout-btn" onclick="razorPay()">Click to Checkout</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="./razorpay.js"></script>
+</body>
+</html>

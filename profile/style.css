@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* nav bar and menu */
+.nav-bar{
+    width: 100%;
+    height: 50px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+}
+.nav-bar ul{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+}
+.nav-bar ul li{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+} 
+.nav-bar ul li a{
+    text-decoration: none;
+    color: rgb(207, 205, 205);
+}
+.nav-bar ul li:hover,.nav-bar ul li a:hover{
+    background-color: white;
+    color: black;
+
+}
+.nav-vertical{
+    display: none;
+}
+.nav-vertical img{
+    cursor: pointer;
+}
+
+.menu-container{
+    width: fit-content;
+    background-color: black;
+    padding: 4px;
+    position:absolute;
+    right: -65px;
+    top: 50px;
+    display: none; 
+   
+}
+.menu-container li{
+    margin: 5px 5px 5px 0px;
+    list-style-type: none;
+}
+.menu-container li a{
+    color: rgb(200, 199, 199);
+    text-decoration: none;
+   
+}
+.menu-container li:hover{
+    background-color: white;
+    color: black;
+}
+.menu-container li a:hover{
+    color: black;
+}
+@media screen and (max-width:450px){
+    #nav-horizontal{
+        display: none;
+    }
+    .nav-vertical{
+        display: block;
+    }
+}
+
+/* profile password */
+.profile-password{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.my-profile ,.edit-password{
+    width: 100%;
+    
+}
+.my-profile h1,.edit-password h1{
+    text-align: center;
+    font-size: 52px;
+}
+.my-profile form , .edit-password form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+}
+.my-profile form input,.edit-password form input{
+    padding: 10px;
+    outline: none;
+
+}
+.my-profile button,.edit-password button{
+    padding: 5px;
+    margin-top: 10px;
+    width: 150px;
+    cursor: pointer;
+    background: #000;
+    color: white;
+
+}
