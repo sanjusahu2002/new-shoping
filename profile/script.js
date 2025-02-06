@@ -3,14 +3,14 @@ let menuBtn = document.getElementById('menu');
 let menuBox = document.getElementById('menu-box');
 
 menuBtn.addEventListener('click',()=>{
-    if(menuBtn.getAttribute('src') == '../loginSignup/menu.png'){
-        menuBtn.setAttribute('src','../loginSignup/close.png');
+    if(menuBtn.getAttribute('src') == '../menu.png'){
+        menuBtn.setAttribute('src','../close.png');
         menuBox.style.right = '0px';
         menuBox.style.display = 'block';
         
     }
     else{
-        menuBtn.setAttribute('src','../loginSignup/menu.png');
+        menuBtn.setAttribute('src','../menu.png');
         menuBox.style.right = '-65px';
         menuBox.style.display = 'none';
     }
