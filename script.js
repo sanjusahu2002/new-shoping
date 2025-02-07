@@ -23,6 +23,7 @@ signIn.addEventListener('click',()=>{
     document.getElementById('signinbox').style.display = 'block';
     document.getElementById('signUp').style.display = 'block';
     document.getElementById('signupbox').style.animationName = '';
+    document.getElementById('signupbox').style.display = 'none';
 
 })
 
@@ -32,6 +33,7 @@ let signUp = document.getElementById('signUp');
 let signUpBox = document.getElementById('signupbox');
 
 signUp.addEventListener('click',()=>{
+    document.getElementById('signupbox').style.display = 'block';
     document.getElementById('signinbox').style.display = 'none';
     signUpBox.style.animationName = 'flow';
     signUp.style.display = 'none';
@@ -105,6 +107,7 @@ let signEmail = document.getElementById('signin-email');
 let signPassword = document.getElementById('signin-password');
 let signInBtn = document.getElementById('signin');
 let userLogIn = JSON.parse(localStorage.getItem('logInUser'));
+
 if(!userLogIn.length>0){
         function logInBtn(){
             if(signEmail.value.length>0 && signPassword.value.length>0){
@@ -141,4 +144,33 @@ else{
         window.location.href = "../profile/index.html";
     }
 }
- 
+function logInBtn(){
+    if(signEmail.value.length>0 && signPassword.value.length>0){
+    let users = JSON.parse(localStorage.getItem('users'));
+    let user = users.filter((v)=> v.email == signEmail.value);
+    if(user.length>0){
+        if(signPassword.value == user[0].password){
+            let logInUser = [{
+                logInUserEmail : signEmail.value,
+                logInUserPassword : signPassword.value
+            }];
+            localStorage.setItem('logInUser',JSON.stringify(logInUser));
+            window.location.href = '../shop/index.html';
+            signEmail.value = '';
+            signPassword.value = "";
+            console.log('log in succesfully');
+        }
+        else{
+            alert('Password incorrect.')
+        }
+    }
+    else{
+        alert("Email not found ! Try to sign up.")
+    }
+}
+else{
+    alert("Email or Password should not be empty !");
+}
+};
+
+// try
