@@ -120,7 +120,7 @@ if(!userLogIn.length>0){
                         logInUserPassword : signPassword.value
                     }];
                     localStorage.setItem('logInUser',JSON.stringify(logInUser));
-                    window.location.href = '../shop/index.html';
+                    window.location.href = './shop/index.html';
                     signEmail.value = '';
                     signPassword.value = "";
                     console.log('log in succesfully');
